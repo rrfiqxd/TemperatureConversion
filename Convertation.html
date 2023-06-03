@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="itr">
+    <head>
+        <meta charset="utf-8">
+        <title>Temperature Konversation | Rofiq & Daxyyz</title>
+    <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="img/R&J.png" >
+    </head>
+    <body>
+
+        
+        <div class="container">
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea id="from-text" placeholder="Enter temperature" required></textarea>
+                <textarea id="to-text" placeholder="Conversion results"  readonly disabled required></textarea>
+            </div>
+            <ul class="controls">
+                <li class="row from">
+                    <div class="icons">
+                        <i class="fas fa-volume-up" onclick="iconsuara()" value='play'></i>
+                    </div>
+                    <select id="select1">
+                        <option value="1">°Reamur</option>
+                        <option value="2">℉ahrenhit</option>
+                        <option value="3">°Kelvin</option>
+                        <option value="4">℃elcius</option>
+                   </select>
+                   </li>
+                   <li class="exhange"><img src="img/arrow-left-right-line.png"></li>
+                   <li class="row to">
+                   <select id="select2">
+                    <option value="1">°Reamur</option>
+                    <option value="2">℉ahrenhit</option>
+                    <option value="3">°Kelvin</option>
+                    <option value="4">℃elcius</option>
+                </select>                   
+                    <div class="icons1">
+                        <i class="fas fa-volume-up" onclick="iconsuara1()" value='play'></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button onclick="getcube()" >Convert temperate</button>
+        </div>
+   
+        
+
+<div class="footer">
+   <ul class="logo">
+    <img src="img/R&J.png"style="" width="165px" color="white">
+    </ul>
+    <nav id= "container1" >	
+        <div id="brand1" >
+        <ul id="bar1"> 
+        <li id=""><a href="https://www.instagram.com/jonathansptd/" style="margin-left: 0;"  class="ins"><img src="img/ig.png" style="width: 23px;" color="white;"></a></li>
+        <li id=""><a href="https://web.facebook.com/?_rdc=1&_rdr" style="margin-left: 0;" class="fb" ><img src="img/fb.png" style="width: 23px;" ></a></li>
+        <li id=""><a href="https://twitter.com/login" style="margin-left: 0;" class="twt" ><img src="img/twt.png" style="width: 23px;" ></a>
+        </li>
+        <li id=""><a href="https://www.youtube.com/channel/UCV_NoVPTwvpoks7zkMWQ5Kw" style="margin-left: 0;" class="yt" ><img src="img/yt.png" style="width: 23px;" ></a></li>
+        </ul>
+</nav>
+    <ul class="about">
+        <img src="img/rofiq.jpeg" width="130px" style="position: relative; border-radius: 50%; left: 90px;" class="rofiq" >
+        <h4 style="color:#9C9EFE;">ABOUT DEVELOPMENT R&J</h4>
+        <h4 style="color: white; top: 36px;">
+        NAME   : M ROFIQ FADILLAH<br>
+        SCHOOL : SMKN 1 SAMPIT<br>
+        CLASS  : X PPLG 2<br>
+        AGE    : 16th
+        </h4>
+    <img src="img/david.jpeg" width="120px" style="position: relative; border-radius: 100%; left: 305px;" class="david">
+        <h4 style="left: 380px; color:#9C9EFE;">ABOUT WEB DESIGNER R&J</h4>
+        <h4 style="color: white; top: 36px; left: 380px;">
+            NAME   : DAVID JONATHAN<br>
+            SCHOOL : SMKN 1 SAMPIT<br>
+            CLASS  : X PPLG 2<br>
+            AGE    : 16th    
+        </h4>
+    </ul>
+
+</div>
+</div>
+
+<div class="bottom">
+    <p style="text-align: center;">Copyright &copy; 2022 <a href="">DAVID JONATHAN & M ROFIQ FADILLAH </a></p>
+</div> 
+
+<script>
+    var opsi1 = document.getElementById("select1");
+    var opsi2 = document.getElementById("select2");
+
+    function getcube(){
+        
+        // Rumus konversi celcius
+        if(opsi1.value==4){
+            if(opsi2.value==2){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML =((hasil)*(9/5)+32);
+            }
+            else if(opsi2.value==1){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML =(4/5)*hasil;
+            }
+            else if(opsi2.value==3){
+                var hasil= parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML = hasil + 273.15;
+            }
+            else if(opsi2.value==4){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML = hasil;
+            }
+            else{
+                lert("error select 1");
+            }
+        // Rumus konversi reamur
+        }else if(opsi1.value==1){
+            if(opsi2.value==2){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML =(((hasil)*9/4) + 32);
+            }
+            else if(opsi2.value==3){
+                var hasil=parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML =((5/4)*hasil)+273;
+            }
+            else if(opsi2.value==4){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML = hasil*(5/4);
+            }
+            else if(opsi2.value==1){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML = hasil;
+            }
+            else{
+                lert("error select 1");
+            }
+        // Rumus konversi fahrenhit
+        }else if(opsi1.value==2){
+            if(opsi2.value==1){
+                var hasil=parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML =(((hasil)- 32) *4/9);
+            }
+            else if(opsi2.value==3){
+                var hasil=parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML =((hasil-32)*(5/9))+273.15;
+            }
+            else if(opsi2.value==4){
+                var hasil=parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML = ((hasil-32)*(5/9));
+            }
+            else if(opsi2.value==2){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML = hasil;
+            }
+            else{
+                lert("error select 1");
+            }
+        // Rumus konversi kelvin
+        }else if(opsi1.value==3){
+            if(opsi2.value==1){
+                var hasil=parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML =(((hasil) - 273)*(4/5));
+            }
+            else if(opsi2.value==2){
+                var hasil=parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML =((9/5)*hasil)-459.67;
+            }
+            else if(opsi2.value==4){
+                var hasil=parseFloat(document.getElementById("from-text").value);
+            document.getElementById("to-text").innerHTML = (hasil-273.15);
+            }
+            else if(opsi2.value==3){
+                var hasil=document.getElementById("from-text").value;
+            document.getElementById("to-text").innerHTML = hasil;
+            }
+            else{
+                lert("error select 2");
+            }
+        }else{
+            alert("error select1 ");
+        }
+        
+    }    
+    function iconsuara(){
+        var hasil = document.getElementById("from-text").value,
+            selectSatu = document.getElementById("select1").value
+
+        responsiveVoice.speak(selectSatu === "1" ? hasil + "°Reamur" : selectSatu === "2" ? hasil + "°Farenheit" : selectSatu === "3" ? hasil + "°Kelvin" : selectSatu === "4" ? hasil + "°Celcius" : "", "Indonesian Male");
+    }
+    function iconsuara1(){
+        var hasil = document.getElementById("to-text").value,
+            selectDua = document.getElementById("select2").value
+            
+        responsiveVoice.speak(selectDua === "1" ? hasil + "°Reamur" : selectDua === "2" ? hasil + "°Farenheit" : selectDua === "3" ? hasil + "°Kelvin" : selectDua === "4" ? hasil + "°Celcius" : "", "Indonesian Male");            }
+
+</script>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=js1kyQF5"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+@font-face{
+    font-family: 'Poppins';
+    src: url('PoppinsLight-l4Zw.otf');
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5271E9;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+ 
+}
+img{
+  background: none;
+  float: left;
+  right: 30px;
+}
+.header{
+  width: 50%;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  top: 30px;
+}
+.header h1{
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.container{
+  width: 690px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+}
+.wrapper{
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+.wrapper .text-input{
+  display: flex;
+  border-bottom: 1px solid #bbb;
+}
+
+.text-input #to-text{
+  border-radius: 0px;
+  border-left: 1px solid #bbb;
+}
+.text-input textarea{
+  text-align: center;
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 30px;
+  border-radius: 5px;
+  background: none;
+  padding: 10px 15px;
+}
+
+.controls{
+  list-style: none;
+  padding: 12px 15px;
+}
+.controls, li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls .icons1{
+  width: 38%;
+  border-left: 1px solid #9f9f9f;
+}
+#from-text{
+  font-size: 24px;
+}
+#to-text{
+  font-size: 24px;
+}
+.controls .icons{
+  width: 38%;
+  border-right: 1px solid #9f9f9f;
+}
+.controls .row.from .icons{
+  padding-right: 15px;
+}
+.controls .row.to .icons1 {
+  padding-right: 15px;
+}
+.controls .icons i{
+  width: 50px;
+  color: #101010;
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 15px;
+}
+.controls .icons1 i{
+  width: 50px;
+  color: #101010;
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+.controls .row select{
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+}
+.controls .fas.fa-exchange-alt::before{
+  color: #9f9f9f;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container button{
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  background: #5271E9;
+}
+.container button{
+  box-shadow: inset 0 0 0 0 #3426ff;
+  transition: cubic-bezier(0.22, 0.47, 0.84, 1) 0.7s;
+  outline: none;
+}
+
+
+/* untuk ukuran layar 700px kebawah */
+@media screen and (max-width: 780px) {
+	
+	.header, 
+	.footer{
+		text-align: center;
+	}
+	.wrapper {
+		width: auto;
+		float: none;
+	}
+	.header h1{
+		width: auto;
+		float: none;
+	}
+	.controls {
+		width: auto;
+		float: none;
+	}
+	
+	#select1 , #select2 { 
+		width: auto;
+		float: none;
+	}
+  option{
+    width: auto;
+    float: none;
+  }
+}
+/* untuk ukuran 1080px kebawah */
+@media screen and (max-width: 1080px) {
+	
+	.container {
+		width: 100%;
+	}
+	.left {
+		width: 25%;
+	}
+	.middle {
+		width: 68%;
+		float: right;
+	}
+	
+	.right {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+	
+}
+
+
+.footer {
+  border-top: 10px solid #fff;
+  padding-top: 60px;
+  height: 210px;
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  bottom: -290px;
+  background-color: #495C83;
+}
+
+
+.bottom{
+  bottom: -252px;
+  position: absolute;
+    width: 100%;
+  margin-bottom: -30px;
+  clear: both;
+	padding: 10px;
+
+}
+.bottom p{
+  border-top: 1px solid #bbb;
+  font-size: 12px;
+  padding-top: 13px;
+}
+
+.bottom p a {
+  color: #9f9f9f;
+  text-decoration: none;
+	position: relative;
+		margin-bottom: 20px;
+    padding-bottom: 1px;
+}
+.bottom a{
+  box-shadow: inset 0 0 0 0 #9f9f9f;
+  transition: cubic-bezier(0.86, 0.84, 0.28, 0.95) 0.8s;
+  outline: none;
+}
+.bottom a:hover{
+  color: #000;
+  box-shadow: inset  630px 0 0 0 #9f9f9f;
+}
+
+.footer img{
+  position: relative;
+  float: left;
+  margin-left: 45px;
+  top: -50px;
+}
+#container1 {
+  padding: 0;
+position: absolute;
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+margin-left: -4px;
+margin-top: 97px;
+}
+#container1 img{
+  margin: 0;
+  left: 10px;
+}
+#brand1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#bar1{
+border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bar1>li{
+  list-style-type: none;
+  padding: 10px;
+}
+#bar1>li>a{
+  text-decoration: none;
+padding-left: 0;
+}
+
+.about h4{
+  position: absolute;
+  margin-left: 38%;
+  width: 30%;
+  top: 10px;
+}
+.rofiq{
+  color: white;
+}
